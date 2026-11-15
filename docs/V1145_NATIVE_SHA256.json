@@ -1,0 +1,8 @@
+{
+  "karoq_hud.c": "5fabce29a1580d79c4e778d93d7cb3e124ecb7b068762f1e1c12c4a39df5fbee",
+  "karoq_hud.h": "2ad3b942144158a243fd8938c629fabc1fb0d801c5dbc52729ea94190c08f79e",
+  "karoq_hud_assets.c": "72b7053c971b136d7d542590bb1e86e95d4be2dded1acfa22d7450a3fc53209c",
+  "karoq_hud_assets.h": "19e99f74ca286ee18cfb1f2751f8b4919acb9a81169d6b451cbd9e304075be3e",
+  "karoq_hud_speed_digits.c": "bf63bfb10db05b78dd7683eaab170b3944be2c5c031ff03f2729d57a3ea4baf2",
+  "karoq_hud_speed_digits.h": "cb83df48e66053cea790a71e5610c28fb24f73b21f875d5c2657f543396f7425"
+}

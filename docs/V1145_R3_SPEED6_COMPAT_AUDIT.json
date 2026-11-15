@@ -1,0 +1,11 @@
+{
+  "source_name": "V1.0.14.4 R1 user-customized native V0.6",
+  "source_original_manifest_sha256": "bed1ea6c0b4ae8f4c3f0d20cfa9f00cbc61895b997be4bf4de33c70bb0c7a304",
+  "original_v06_baseline_sha256": "868a672084de02e20a71f1c8769949858d484335073265d954d8deb4df51e432",
+  "accepted_uploaded_v06_sha256": "67f0136fbb4b81932664649184fa5b9a0796f6154ca924e33aae88cdff71ae06",
+  "compatibility_difference": "speed[4] -> speed[6], comment only",
+  "patched_native_sha256": "5fabce29a1580d79c4e778d93d7cb3e124ecb7b068762f1e1c12c4a39df5fbee",
+  "acc_source": "main/id/signals/karoq_ui_acc_set.c",
+  "source_project_modified": false,
+  "can_mode": "LISTEN_ONLY"
+}

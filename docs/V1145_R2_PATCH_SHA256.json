@@ -1,0 +1,6 @@
+{
+  "main/ui/v0_6/karoq_hud.c": "5fabce29a1580d79c4e778d93d7cb3e124ecb7b068762f1e1c12c4a39df5fbee",
+  "main/ui/layout/karoq_reference_layout.c": "4d39f4dae2e40f3860d353e2955e36f900bd14b610de62e093b767336e494ce3",
+  "main/ui/layout/karoq_acc_dual_palette.c": "1cfedce273195c9bb303844845009fa1400d8777e4f29816547a5de7b307572d",
+  "main/ui/layout/karoq_speed_geometry.h": "bdd8955564181f0ddfcb8b92adc9bdf14ba1d91a3e78ade526d71b2d366cbac4"
+}

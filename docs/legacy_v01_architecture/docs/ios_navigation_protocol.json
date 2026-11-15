@@ -1,0 +1,19 @@
+{
+  "protocol": "neal.hud.nav.v1 (PROPOSAL ONLY)",
+  "description": "An authenticated, opt-in companion app can send normalized navigation guidance over BLE or Wi-Fi. No claim of access to Google Maps or Apple Maps UI state.",
+  "transport": "BLE GATT custom service OR mutually authenticated HTTPS/WebSocket over Wi-Fi",
+  "message": {
+    "type": "navigation_update",
+    "source": "ios_companion",
+    "sequence": 134,
+    "timestamp_ms": 31234000,
+    "active": true,
+    "maneuver": "right",
+    "meters_to_turn": 1700,
+    "meters_remaining": 15000,
+    "road_name": "TEST ONLY",
+    "valid_for_ms": 3000
+  },
+  "security": "Design must add pairing/authentication, integrity/replay defense, and source timeout before production.",
+  "road_signs": "Do not infer camera-recognized regulatory signs from turns or route geometry; a map-based limit is separately labeled as a map estimate."
+}

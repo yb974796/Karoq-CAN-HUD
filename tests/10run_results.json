@@ -1,0 +1,86 @@
+{
+  "host_only": true,
+  "cycles": [
+    {
+      "run": 1,
+      "status": "PASS",
+      "duration_ms": 2626,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpaizxdcq_/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpzq3h5ek2/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 2,
+      "status": "PASS",
+      "duration_ms": 2511,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpwu9jamn6/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpi99mtvsi/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 3,
+      "status": "PASS",
+      "duration_ms": 2638,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmp_wys4sa7/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmphdsh3i1q/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 4,
+      "status": "PASS",
+      "duration_ms": 2536,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpj51cjr1w/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpo6qfw_2r/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 5,
+      "status": "PASS",
+      "duration_ms": 2590,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpy3yi38yv/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmp3jfx3ybv/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 6,
+      "status": "PASS",
+      "duration_ms": 2710,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpcenszw6y/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpq5rg9own/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 7,
+      "status": "PASS",
+      "duration_ms": 2480,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpardpujrx/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpoz8q6gbs/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 8,
+      "status": "PASS",
+      "duration_ms": 3005,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmp_c_j2axt/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmp726ja97i/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 9,
+      "status": "PASS",
+      "duration_ms": 3075,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpiisppbvr/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmpbswks3z5/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    },
+    {
+      "run": 10,
+      "status": "PASS",
+      "duration_ms": 2577,
+      "exit_code": 0,
+      "output": "PASS: 10x tracker first-seen/repeat/changed/RTR/DLC/STD-EXT/full-table and reset\nbaseline IDs: 2 current IDs: 2 new: 1 missing: 1\nreport: /tmp/tmpm95e7g2l/compare.csv\nPASS: cross-session new, existing, and missing CAN ID classes\nSUCCESS: independent V1.0.4 project: /tmp/tmp7qxgu5kb/v104\nPASS: V0.6 UI SHA-256 unchanged: 3 files\nPASS: core, CAN RX, speed decoder and ACC decoder unchanged\nPASS: V1.0.4 migration, all original UI hashes, receive integration, guarded queue drain\nNOTE: static checks; full ESP-IDF build and SDMMC hardware test must be performed on device\nPASS: independent upgrade, UI bytes preserved, source unchanged, overwrite refused\nPASS: V1.0.4 logger/button syntax under ESP-IDF API stubs\n",
+      "errors": ""
+    }
+  ],
+  "total_passed": 10
+}

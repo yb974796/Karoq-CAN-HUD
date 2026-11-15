@@ -1,0 +1,8 @@
+CAN_ID,Frames,Function,Source,Signal mapping,Status,Write allowed
+0x0FD,STD11,ESP_21 speed,ESP/ABS,byte4-5 LE * 0.01 km/h,real-vehicle verified,NO
+0x30B,STD11,Kombi_01 cluster speed,cluster,byte6 and byte7 low2 bits * 0.32 km/h,DBC backup / not road-validated,NO
+0x30C,STD11,ACC_02 raw ACC,ACC,DISP bits61-63 PRIMARY bits22-23 target bits12-21 * 0.32,read-only logged / state meaning unverified,NO
+0x0B2,STD11,ESP-related,ESP,not decoded,seen in log,NO
+0x17333210,EXT29,Navigation BAP,head unit,not decoded,seen in log,NO
+0x17333110,EXT29,Audio BAP,head unit,not decoded,seen in log,NO
+0x17331A10,EXT29,BAP other,head unit,not decoded,seen in log,NO

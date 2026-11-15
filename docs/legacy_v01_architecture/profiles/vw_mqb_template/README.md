@@ -1,0 +1,1 @@
+Copy the vehicle profile directory; keep CAN-K, CAN-E and BAP definitions separated by physical network. Do not reuse unrelated MQB IDs without capture verification. Update CAN rule CSV, feature flags, vehicle ID, and BAP decoders for the new car. Hardware drivers are not duplicated.

@@ -1,0 +1,13 @@
+can_id,message,usage,signal,bit_start,bit_length,scale,verification,bus_note
+0x0FD,ESP_21,車速,ESP_v_Signal,32,16,0.01,實車已驗證原始車速,此 HUD 接線曾看到
+0x0B2,ESP_19,四輪輪速,ESP_VL_Radgeschw_02,32,16,0.0075,NEW_ID 日誌有 ID,非代表四輪動態精度驗證
+0x30B,Kombi_01,儀表速度,KBI_angez_Geschw,48,10,0.32,NEW_ID 日誌有 ID,實際車速差需對照
+0x120,TSK_06,ACC 可用/啟用,TSK_Status,24,3,1,目前 NEW_ID 日誌未觀察,openpilot 使用 PT bus
+0x30C,ACC_02,ACC 顯示/設定,ACC_Wunschgeschw_02,12,10,0.32,已觀察 DISP 0/6 與原始 3FF,不能用 DISP 當 Active
+0x122,ACC_06,ACC 控制狀態,ACC_Status_ACC,60,3,1,目前 NEW_ID 日誌未觀察,可能不同網段
+0x12B,GRA_ACC_01,巡航按鍵,GRA_Tip_Setzen,16,1,1,NEW_ID 日誌有 ID,按鍵動作需實測
+0x397,LDW_02,車道警示,LDW_Status_LED_gruen,62,1,1,目前 NEW_ID 日誌未觀察,攝影機網段可能不同
+0x09F,LH_EPS_03,轉向輔助狀態,EPS_HCA_Status,32,4,1,NEW_ID 日誌有 ID,不單獨當 Lane Active
+0x126,HCA_01,攝影機轉向輔助,HCA_01_Status_HCA,32,4,1,目前 NEW_ID 日誌未觀察,攝影機網段可能不同
+0x30F,SWA_01,盲點監測,SWA_Infostufe_SWA_li,26,1,1,NEW_ID 日誌有 ID,需後視鏡實測
+0x366,Blinkmodi_02,方向燈,Comfort_Signal_Left,23,1,1,NEW_ID 日誌有 ID,openpilot 有使用但未實測兩側切換

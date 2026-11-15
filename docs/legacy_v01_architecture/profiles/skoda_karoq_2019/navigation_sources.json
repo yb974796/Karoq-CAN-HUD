@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "inputs": [
+    {"id":"oem_bap","transport":"vehicle CAN-K","enabled":true,"status":"unverified"},
+    {"id":"ios_companion","transport":"BLE GATT or Wi-Fi","enabled":false,"status":"requires dedicated iOS app and supported navigation feed"}
+  ],
+  "priority": ["oem_bap", "ios_companion"],
+  "timeout_ms": 3000,
+  "never_claim": "Direct access to turn-by-turn state of Apple Maps / Google Maps via generic Bluetooth pairing"
+}

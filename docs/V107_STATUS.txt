@@ -1,0 +1,3 @@
+Firmware V1.0.7
+UI original image bind=UNBOUND
+UI V0.6 unchanged by final consolidation

@@ -1,0 +1,14 @@
+{
+  "version": "V1.0.5",
+  "date": "2026-10-31",
+  "source": "commaai/opendbc",
+  "dbc_blob_sha": "bfa397188ad2bbea3bd0e766856a73e18054b4ff",
+  "mqb_ids": 12,
+  "signals": 39,
+  "host_10run": "10/10 PASS",
+  "v104_regression": "PASS",
+  "migration_fixture": "PASS",
+  "esp_idf_device_build": "NOT_RUN",
+  "hardware_can_sd": "NOT_RUN",
+  "ui_source_modified": false
+}

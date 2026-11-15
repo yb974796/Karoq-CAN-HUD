@@ -1,0 +1,5 @@
+#pragma once
+#define KAROQ_FIRMWARE_VERSION "1.0.14.6-R1"
+#define KAROQ_UI_BASELINE "CAN_SNIFFER_V0.6"
+#define KAROQ_CAN_SPEED_ID "0x0FD"
+#define KAROQ_ACC_PROBE_ID "0x30C"

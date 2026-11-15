@@ -1,0 +1,23 @@
+{
+  "profile_id": "skoda_karoq_2019_mqb",
+  "platform": "MQB",
+  "display_board": "Waveshare ESP32-S3-Touch-LCD-3.49 V2",
+  "can_connection": {
+    "preferred_bus": "CAN-K / comfort",
+    "proposed_gateway_connector": "J533 T20a/15 H, T20a/5 L",
+    "can_bitrate": null,
+    "hardware_silent": true,
+    "software_listen_only": true
+  },
+  "feature_flags": {
+    "vehicle_speed": true,
+    "acc": true,
+    "lane_assist": true,
+    "traffic_signs": true,
+    "navigation": true,
+    "gear_display": false,
+    "traffic_light_detection": false
+  },
+  "navigation_preference": "oem_bap_then_ios_companion",
+  "status": "engineering hypotheses; CAN-K IDs/BAP unverified"
+}

@@ -1,0 +1,32 @@
+PASS 01
+PASS 02
+PASS 03
+PASS 04
+PASS 05
+PASS 06
+PASS 07
+PASS 08
+PASS 09
+PASS 10
+10run: 10/10 PASS (host bit layout + input checks; NOT vehicle validation)
+SUCCESS: V1.0.5 independent project created: /tmp/tmpokmadwb8/v105
+V0.6 UI unchanged SHA256: 3 files
+Speed/ACC/SD/BOOT unchanged; new read-only MQB metadata+probe installed.
+PASS: UI V0.6 unchanged 3 files; all 3 hooks exactly once; V1.0.5 CMake valid
+PASS V1.0.5 migration source unchanged, V0.6 UI SHA256 unchanged, no duplicate hooks
+Input: sample_new_ids.log
+Distinct CAN IDs: 4 MQB known 11-bit ID seen: 4 / 12
+  0x0FD ESP_21          SEEN (1 frames)            speed observed
+  0x0B2 ESP_19          NOT OBSERVED IN INPUT      wheels observed
+  0x30B Kombi_01        SEEN (1 frames)            cluster speed observed
+  0x120 TSK_06          NOT OBSERVED IN INPUT      ACC core
+  0x30C ACC_02          SEEN (1 frames)            ACC display observed
+  0x122 ACC_06          NOT OBSERVED IN INPUT      ACC status
+  0x12B GRA_ACC_01      SEEN (1 frames)            ACC buttons observed
+  0x397 LDW_02          NOT OBSERVED IN INPUT      camera lane warning
+  0x09F LH_EPS_03       NOT OBSERVED IN INPUT      EPS observed
+  0x126 HCA_01          NOT OBSERVED IN INPUT      camera steering
+  0x30F SWA_01          NOT OBSERVED IN INPUT      blind spot observed
+  0x366 Blinkmodi_02    NOT OBSERVED IN INPUT      turn signals observed
+Note: NEW_ID-only text log is a sparse snapshot, not continuous CAN traffic.
+Note: absent IDs may be on different CAN buses, filtered by gateway, or inactive.

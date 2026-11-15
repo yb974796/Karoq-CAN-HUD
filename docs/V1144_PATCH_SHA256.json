@@ -1,0 +1,9 @@
+{
+  "main/ui/layout/karoq_reference_layout.c": "9d00756c62db890439c3e3417bcf56a654b181da0dc2380c7af0e570b04fcab5",
+  "main/id/navigation/karoq_oem_nav_decoder.c": "23004e3b9872ba0a1d6dc2f438e0673d64f88c8fb04a7282bff8450cd230f7b3",
+  "main/ui/layout/karoq_nav_clean_assets.c": "6ce1110e5e1b99ce2e435574ee6692c373029d5e0c354a388731db5b73a80307",
+  "main/ui/layout/karoq_nav_clean_assets.h": "f8eb817e956f01b9e7ad6dceb3179daf630152fefd7537f4ff742d5df55d6fe7",
+  "main/ui/layout/karoq_acc_dual_palette.c": "b36dcb2cc470cff98713df8e1186b0822ebb71a468787fc95831eb83d70623da",
+  "main/ui/layout/karoq_acc_dual_palette.h": "5de0fc36ba3254062fe0d16def5eb557a21a0826e4528203f1c5d5e4fa5a9e70",
+  "main/other/navigation/karoq_nav_service.h": "1c4d929452047294dfc9e3e7aa39aadc4d30cc39c5313d4131acb3e8d19d26ee"
+}

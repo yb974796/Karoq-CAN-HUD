@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "verification_status": "candidate only - no decoding enabled",
+  "candidates": [
+    {"id":"0x17332100","extended":true,"role":"VZA ASG candidate","decoder":"NOT_IMPLEMENTED"},
+    {"id":"0x17332110","extended":true,"role":"VZA FSG candidate","decoder":"NOT_IMPLEMENTED"}
+  ],
+  "oem_navigation": {"can_id": null, "decoder": "NOT_IMPLEMENTED"},
+  "notes": "BAP requires transport reassembly, message/function interpretation, freshness, and verification. Do not equate a CAN ID to a speed limit."
+}
