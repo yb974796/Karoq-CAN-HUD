@@ -1,3 +1,7 @@
+> **Language / 語言：** [繁體中文](#traditional-chinese) ｜ [English](#english)
+
+<a id="traditional-chinese"></a>
+
 # Karoq CAN HUD
 
 Škoda Karoq / Volkswagen MQB 的 **ESP32-S3 CAN HUD** 專案。以被動接收 CAN 訊號的方式，在 **640 × 172** 顯示器上呈現車速、速限標誌、ACC 設定速度、駕駛輔助狀態和原廠導航指示。
@@ -109,3 +113,121 @@ idf.py -p COM8 flash monitor
 - [comma.ai opendbc](https://github.com/commaai/opendbc)
 
 目前 Repository 未附正式 `LICENSE`；若需公開授權或接受貢獻，請先盤點原始碼、素材和第三方元件授權。
+
+---
+
+<a id="english"></a>
+
+# English Version
+
+## Overview
+
+**Karoq CAN HUD** is an experimental ESP32-S3 head-up display project for the Škoda Karoq / Volkswagen MQB platform. It passively receives CAN frames and renders driving information on a **640 × 172** display: vehicle speed, speed-limit signs, ACC set speed, assistance states, and OEM navigation instructions.
+
+**Current stable baseline:** V1.0.14.6 R1 (20 RUN UI Stability)  
+**UI baseline:** Karoq CAN HUD V0.6 — original layout and assets retained  
+**Version tag:** [v1.0.14.6-r1](https://github.com/yb974796/Karoq-CAN-HUD/tree/v1.0.14.6-r1)
+
+> ⚠️ **Display and research only.** This is not a vehicle controller or a substitute for the factory instrument cluster. The ACC, Lane Assist, and Travel-style indicators reflect observed CAN signals; they must not be treated as authoritative confirmation of system engagement or driving safety.
+
+## Hardware and Development Environment
+
+| Item | Configuration |
+|---|---|
+| Board | Waveshare ESP32-S3-Touch-LCD-3.49 V2 |
+| Flash / PSRAM | 16 MB / 8 MB |
+| HUD display | 640 × 172 |
+| CAN transceiver | TJA1051T/3 |
+| CAN controller | ESP32-S3 TWAI, 500 kbps, listen-only |
+| CAN RX | GPIO2 |
+| CAN TX | GPIO1 (configured in firmware, not connected to the vehicle) |
+| SDK | ESP-IDF v5.5.3 |
+| UI framework | LVGL v9 |
+
+## Features and Validation Status
+
+| Feature | Data source | Status / limitation |
+|---|---|---|
+| Live vehicle speed | Standard CAN `0x0FD` ESP_21 | Verified with on-vehicle logs; `0x30B` provides a decoded fallback |
+| ACC set speed and standby/active display | Standard CAN `0x30C` ACC_02 | Several combinations observed on the vehicle; unknown combinations are handled conservatively |
+| ACC / Lane / Travel-style indicator | `0x09F` EPS HCA and `0x30C` ACC | Inferred from signal combinations; **not** independent verification of OEM Travel Assist |
+| OEM navigation maneuver and distance | Extended CAN `0x17333210` / `0x17333211` BAP | Selected maneuvers and distance decoded; unverified maneuvers are not guessed |
+| VZA speed-limit sign | Extended CAN `0x17332110` BAP | Trial display; the exact meaning of some flags remains unverified |
+| SD CAN logging | Short press of BOOT (GPIO0) | CSV recording and NEW ID tracking |
+
+Other candidate IDs observed in logs include `0x0B2` (wheel speed), `0x12B` (cruise buttons), `0x397` (lane warning), `0x30F` (blind spot), and `0x366` (turn signals). **Receiving an ID does not validate every bit field on this particular vehicle.**
+
+### Key CAN Fields
+
+- **Vehicle speed:** `0x0FD`, bits 32–47, little-endian, raw value × 0.01 km/h.
+- **ACC set speed:** `0x30C`, bits 12–21, little-endian, raw value × 0.32 km/h; `0x3FF` means unavailable.
+- **ACC status:** `0x30C`, Primary bits 22–23 and Display bits 61–63; only validated combinations are reflected in the UI.
+- **Lane status:** `0x09F`, EPS HCA Status bits 32–35; confirmation uses consecutive observations, not just a warning LED.
+- **OEM navigation:** BAP route-guidance, maneuver, and distance fields; the observed distance representation is decoded as little-endian.
+
+See [MQB CAN ID map](docs/MQB_CAN_ID_MAP.csv), [ID Registry](docs/ID_REGISTRY.csv), and [ADAS state matrix](docs/ADAS_LINK_MATRIX.md). Some documents preserve earlier research-stage observations; cross-check them against the current source code and vehicle logs.
+
+## Repository Structure
+
+```text
+main/
+├── core/                # Startup, firmware information
+├── id/
+│   ├── can/             # CAN receive and dispatch
+│   ├── decoders/        # Speed and ACC decoding
+│   ├── signals/         # MQB and ADAS state handling
+│   ├── navigation/      # OEM navigation BAP
+│   └── traffic_sign/    # VZA traffic-sign BAP
+├── ui/
+│   ├── v0_6/            # Original V0.6 HUD UI and assets
+│   ├── bridge/          # Signal snapshots to LVGL
+│   └── layout/          # Navigation, VZA, and ACC layout
+└── other/               # Buttons, SD logger, diagnostics
+components/              # Board-level components
+docs/                    # Documentation and CAN reference
+tests/                   # Host and simulation tests
+sdkconfig.defaults       # ESP-IDF defaults
+```
+
+**UI design rule:** V0.6 (640 × 172) remains the single layout baseline: assistance status at upper left, speed-limit sign at lower left, navigation in the center, large speed at right, and ACC set speed at lower right. Avoid competing LVGL writers.
+
+## Build and Flash on Windows
+
+Open an **ESP-IDF v5.5.3 PowerShell Environment**:
+
+```powershell
+git clone https://github.com/yb974796/Karoq-CAN-HUD.git
+cd Karoq-CAN-HUD
+idf.py set-target esp32s3
+idf.py reconfigure
+idf.py build
+```
+
+After confirming the board's serial port, flash and monitor:
+
+```powershell
+idf.py -p COM8 flash monitor
+```
+
+`COM8` is an example port from development; adjust it for your Windows device. A compatible ESP-IDF dependency and hardware setup is required. Successful builds are not guaranteed on every machine without configuration checks.
+
+## V1.0.14.6 R1 Test Summary
+
+ESP32-S3 startup, live CAN reception, ACC set-speed display, partial OEM navigation decoding, and SD recording have been exercised on the vehicle. The 20 RUN changes include selective LVGL asset updates and short-dropout handling to reduce ACC visual flicker.
+
+**Open issues:** `speed_layout_mismatches` diagnostics, confirmation that LCD flicker is fully resolved, unmapped navigation maneuvers, VZA flags, and remaining unverified ADAS signal fields. Unknown signals must not be used for vehicle control or safety-critical assumptions.
+
+## Safety and Data Privacy
+
+- CAN is **listen-only**; this firmware does **not transmit** acceleration, braking, steering, or other vehicle control frames.
+- Drivers must not handle wiring, debugging tools, serial monitoring, or firmware flashing while driving.
+- Keep raw logs containing VINs, location history, or other vehicle-identifying data—and any secrets or private keys—out of public commits.
+- Test changes on a development branch before merging into `main` and assigning a release tag.
+
+## References and License
+
+- [Espressif ESP-IDF](https://docs.espressif.com/projects/esp-idf/)
+- [LVGL](https://docs.lvgl.io/)
+- [comma.ai opendbc](https://github.com/commaai/opendbc)
+
+No project-wide `LICENSE` file has been selected yet. Review copyright and license obligations for project code, assets, and third-party dependencies before offering redistribution rights.
